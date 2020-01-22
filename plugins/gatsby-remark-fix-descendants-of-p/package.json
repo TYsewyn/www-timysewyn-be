@@ -1,0 +1,21 @@
+{
+    "name": "gatsby-remark-fix-div-in-p",
+    "version": "1.0.0",
+    "description": "Fix div in p",
+    "author": "Tim Ysewyn",
+    "license": "MIT",
+    "private": true,
+    "main": "index.js",
+    "dependencies": {
+        "unist-util-visit": "^1.4.0"
+    },
+    "devDependencies": {
+        "eslint": "^5.3.0",
+        "eslint-config-prettier": "^3.0.1",
+        "lint-staged": "^7.2.2",
+        "prettier": "1.14.2"
+    },
+    "peerDependencies": {
+        "gatsby": ">2.0.0"
+    }
+}
