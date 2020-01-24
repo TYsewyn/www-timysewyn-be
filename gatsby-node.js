@@ -21,6 +21,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
             frontmatter {
               title
               category
+              iso: date
               date(formatString: "MMMM DD, YYYY")
               thumbnail: image {
                 childImageSharp {

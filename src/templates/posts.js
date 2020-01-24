@@ -55,7 +55,7 @@ BlogPost.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default ({ children, location : { pathname }, pageContext: { frontmatter : { category, date, description, thumbnail, title } } }) => {
+export default ({ children, location : { pathname }, pageContext: { frontmatter : { category, date, description, iso, thumbnail, title } } }) => {
   let { site_name, siteUrl : origin } = useSiteMetadata();
   return (
     <Layout>
@@ -69,6 +69,9 @@ export default ({ children, location : { pathname }, pageContext: { frontmatter 
         <meta property="og:image" content={origin + thumbnail.src} />
         <meta property="og:image:width" content={thumbnail.width} />
         <meta property="og:image:height" content={thumbnail.height} />
+        <meta property="article:author" content={origin} />
+        <meta property="article:published_time" content={iso} />
+        <meta property="article:section" content={category} />
       </Helmet>
       <BlogPost title={title} category={category} date={date}>
         {children}
