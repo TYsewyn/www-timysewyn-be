@@ -66,7 +66,9 @@ export default ({ children, location : { href : url, origin}, pageContext: { fro
         <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${url}`} />
-        <meta property="og:image" content={origin + thumbnail} />
+        <meta property="og:image" content={origin + thumbnail.src} />
+        <meta property="og:image:width" content={thumbnail.width} />
+        <meta property="og:image:height" content={thumbnail.height} />
       </Helmet>
       <BlogPost title={title} category={category} date={date}>
         {children}

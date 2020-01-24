@@ -64,13 +64,16 @@ const TemplateWrapper = ({children}) => {
           <link rel="icon" type="image/png" sizes="32x32" href={`${withPrefix('/')}favicon-32x32.png`} />
           <link rel="mask-icon" href={`${withPrefix('/')}safari-pinned-tab.svg`} color={theme.palette.primary.main} />
 
+          <meta name="twitter:creator" content="@tysewyn" />
           <meta name="twitter:dnt" content="on" />
           <meta name="twitter:widgets:theme" content={appearance} />
           <meta property="og:title" content={site_name} />
           <meta property="og:description" content={description} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content={siteUrl} />
-          <meta property="og:image" content={profile} />
+          <meta property="og:image" content={siteUrl + profile} />
+          <meta property="og:image:height" content="1365" />
+          <meta property="og:image:width" content="1365" />
         </Helmet>
         <Navbar />
         <Container className={classes.main} component="main" role="main" maxWidth="lg">

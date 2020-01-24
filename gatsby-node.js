@@ -24,8 +24,10 @@ exports.createPages = ({ actions, graphql, reporter }) => {
               date(formatString: "MMMM DD, YYYY")
               thumbnail: image {
                 childImageSharp {
-                  fixed(width: 400, height: 400) {
+                  image: fluid(maxWidth: 1200, maxHeight: 1200) {
                     src
+                    height: presentationHeight
+                    width: presentationWidth
                   }
                 }
               }
@@ -45,7 +47,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
     const posts = result.data.allMdx.edges;
 
     posts.forEach(edge => {
-      const {id, excerpt, fileAbsolutePath, frontmatter: { thumbnail: { childImageSharp: { fixed : { src : thumbnail } } }, ...frontmatter} } = edge.node;
+      const {id, excerpt, fileAbsolutePath, frontmatter: { thumbnail: { childImageSharp: { image : thumbnail } }, ...frontmatter} } = edge.node;
       const {slug} = edge.node.fields;
       const component = fileAbsolutePath;
       createPage({
