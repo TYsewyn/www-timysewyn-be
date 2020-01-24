@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 const Literal = (data) => data.children;
 
 const TemplateWrapper = ({children}) => {
-  const {site_name, description} = useSiteMetadata();
+  const {description, site_name, siteUrl} = useSiteMetadata();
 
   const components = {
     a: Literal, // Fix for link within link
@@ -69,7 +69,7 @@ const TemplateWrapper = ({children}) => {
           <meta property="og:title" content={site_name} />
           <meta property="og:description" content={description} />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="/" />
+          <meta property="og:url" content={siteUrl} />
           <meta property="og:image" content={profile} />
         </Helmet>
         <Navbar />
