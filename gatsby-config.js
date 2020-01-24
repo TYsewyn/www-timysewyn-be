@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'TimYsewyn.be',
     description:
-      'Solutions Architect @Pivotal. Avid open source enthusiast. @springframework & @springcloud contributor. Part of @ngbeconf.',
+      'Avid open source enthusiast. Spring Framework & Spring Cloud contributor. Part of NG-BE.',
     siteUrl: 'https://timysewyn.be'
   },
   plugins: [

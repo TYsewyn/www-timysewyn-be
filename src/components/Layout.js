@@ -20,6 +20,8 @@ import "./layout.css";
 import Blockquote from "./Blockquote"
 import Code from "./Code"
 
+import profile from '../img/profile.jpg'
+
 require('../styles/icons');
 
 const useStyles = makeStyles(theme => ({
@@ -40,11 +42,11 @@ const TemplateWrapper = ({children}) => {
     blockquote: Blockquote, // Fix for paragraph within blockquote
     OutboundLink: OutboundLink,
     pre: Code,
-  }
+  };
 
   const appearance = useSelector(state => state.appearance);
   const theme = responsiveFontSizes(createMuiTheme(themeOptions(appearance)));
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
@@ -64,13 +66,11 @@ const TemplateWrapper = ({children}) => {
 
           <meta name="twitter:dnt" content="on" />
           <meta name="twitter:widgets:theme" content={appearance} />
-          <meta property="og:type" content="business.business" />
           <meta property="og:title" content={site_name} />
+          <meta property="og:description" content={description} />
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="/" />
-          <meta
-            property="og:image"
-            content={`${withPrefix('/')}img/og-image.jpg`}
-          />
+          <meta property="og:image" content={profile} />
         </Helmet>
         <Navbar />
         <Container className={classes.main} component="main" role="main" maxWidth="lg">

@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
@@ -8,13 +7,28 @@ exports.createPages = ({ actions, graphql, reporter }) => {
 
   return graphql(`
     {
-      allMdx(limit: 1000) {
+      allMdx(
+        limit: 1000
+        filter: { fields: { collection: { eq: "posts" } } }
+      ) {
         edges {
           node {
             id
+            excerpt(pruneLength: 200)
             fields {
-              collection
               slug
+            }
+            frontmatter {
+              title
+              category
+              date(formatString: "MMMM DD, YYYY")
+              thumbnail: image {
+                childImageSharp {
+                  fixed(width: 400, height: 400) {
+                    src
+                  }
+                }
+              }
             }
             fileAbsolutePath
           }
@@ -31,14 +45,15 @@ exports.createPages = ({ actions, graphql, reporter }) => {
     const posts = result.data.allMdx.edges;
 
     posts.forEach(edge => {
-      const {id, fileAbsolutePath} = edge.node;
-      const {/*collection, */slug} = edge.node.fields;
-      // const component = path.resolve(`src/templates/${collection}.js`);
+      const {id, excerpt, fileAbsolutePath, frontmatter: { thumbnail: { childImageSharp: { fixed : { src : thumbnail } } }, ...frontmatter} } = edge.node;
+      const {slug} = edge.node.fields;
+      const component = fileAbsolutePath;
       createPage({
         path: slug,
-        component: fileAbsolutePath,
+        component: component,
         context: {
-          id: id
+          id: id,
+          frontmatter: { ...frontmatter, thumbnail: thumbnail, description: excerpt }
         },
       })
     })

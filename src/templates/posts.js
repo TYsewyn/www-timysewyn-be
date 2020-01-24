@@ -55,15 +55,18 @@ BlogPost.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default ({children, pageContext : {frontmatter}}) => {
+export default ({ children, location : { href : url, origin}, pageContext: { frontmatter : { category, date, description, thumbnail, title } } }) => {
   let { site_name } = useSiteMetadata();
-  let { category, date, image, title } = frontmatter;
   return (
     <Layout>
       <Helmet defer={false}>
         <title>{title + ` | ` + site_name}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title + ` | ` + site_name} />
+        <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={image} />
+        <meta property="og:url" content={`${url}`} />
+        <meta property="og:image" content={origin + thumbnail} />
       </Helmet>
       <BlogPost title={title} category={category} date={date}>
         {children}
