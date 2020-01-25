@@ -14,7 +14,7 @@
         "clean": "gatsby clean",
         "start": "yarn run develop",
         "build": "gatsby build",
-        "develop": "yarn run clean && gatsby develop",
+        "develop": "gatsby develop",
         "pre-prod": "gatsby clean && gatsby build && gatsby serve",
         "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
         "test": "echo \"Error: no test specified\" && exit 1"

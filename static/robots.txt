@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /static
+
+User-agent: Googlebot-Image
+Allow: /static
+Disallow: /
