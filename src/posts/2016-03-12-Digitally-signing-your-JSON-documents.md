@@ -147,8 +147,8 @@ Visit following links to view the list of supported algorithms for <OutboundLink
 ## JWT
 
 JSON Web Token (<OutboundLink href="https://tools.ietf.org/html/rfc7519" rel="noreferrer" target="_blank">RFC7519</OutboundLink>) is used for passing claims between parties in a web application environment.
-Because the tokens are designed to be compact and URL-safe they are especially usable in a web browser [single sign-on](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) context.
-JWT claims can be typically used to pass the identity of authenticated users between an [identity provider](https://en.wikipedia.org/wiki/Identity_provider) and a [service provider](https://en.wikipedia.org/wiki/Service_provider).
+Because the tokens are designed to be compact and URL-safe they are especially usable in a web browser <OutboundLink href="https://en.wikipedia.org/wiki/Single_sign-on" rel="noreferrer" target="_blank">single sign-on</OutboundLink> (SSO) context.
+JWT claims can be typically used to pass the identity of authenticated users between an <OutboundLink href="https://en.wikipedia.org/wiki/Identity_provider" rel="noreferrer" target="_blank">identity provider</OutboundLink> and a <OutboundLink href="https://en.wikipedia.org/wiki/Service_provider" rel="noreferrer" target="_blank">service provider</OutboundLink>.
 JWT relies on all previously mentioned JSON standards.
 
 The JWT standard defines claims - key/value pairs asserting information about a subject.

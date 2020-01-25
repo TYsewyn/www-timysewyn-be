@@ -71,7 +71,8 @@ Since we want to make everything immutable, the obvious choice here is to use Do
 While starting a container, we can specify environment variables.
 This is where the second part of our solution starts.
 
-Using the `envsubst` bash command we're going to convert a Our `env.js.tpl` file looks like this:
+Using the `envsubst` bash command we're going to convert a template file into an `env.js` file which contains all our data.
+Our `env.js.tpl` file looks like this:
 
 ```javascript
 (function (window) {
@@ -92,7 +93,7 @@ nginx -g 'daemon off;'
 
 Now we need to create a `Dockerfile` which in turn will be used to create our Docker image.
 
-```docker
+```dockerfile
 FROM nginx:1.13-alpine
 
 COPY dist /usr/share/nginx/html

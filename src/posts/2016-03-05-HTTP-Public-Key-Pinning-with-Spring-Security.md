@@ -13,14 +13,15 @@ category: Security
 ## What kind of sorcery is this?
 
 HTTP Public Key Pinning, or short HPKP, is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates.
-This was standardized in [RFC 7469](http://tools.ietf.org/html/rfc7469) and creates a new opportunity for server validation. Instead of using static certificate pinning, where public key hashes are hardcoded within an application, we can now use a more dynamic way of providing this public key hashes.
+This was standardized in <OutboundLink href="http://tools.ietf.org/html/rfc7469" rel="noreferrer" target="_blank">RFC 7469</OutboundLink> and creates a new opportunity for server validation.
+Instead of using static certificate pinning, where public key hashes are hardcoded within an application, we can now use a more dynamic way of providing this public key hashes.
 One caveat to remember is that HPKP uses a Trust On First Use (<OutboundLink href="https://en.wikipedia.org/wiki/Trust_on_first_use" rel="noreferrer" target="_blank">TOFU</OutboundLink>) technique.
 
 ## How does this work?
 
 A list of public key hashes will be served to the client via a special HTTP header by the web server, so clients can store this information for a given period of time.
 On subsequent connections within previous given period of time, the client expects a certificate containing a public key whose fingerprint is already known via HPKP.
-I **strongly** encourage you to read [this article](https://timtaubert.de/blog/2014/10/http-public-key-pinning-explained/) by Tim Taubert, where he explains what keys you should pin and what the different tradeoffs are.
+I **strongly** encourage you to read <OutboundLink href="https://timtaubert.de/blog/2014/10/http-public-key-pinning-explained/" rel="noreferrer" target="_blank">this article</OutboundLink> by Tim Taubert, where he explains what keys you should pin and what the different tradeoffs are.
 
 Imagine you want to terminate the connection between the client and a malicious server for your main domain and all of your subdomains, but also want to be notified when such events happen.
 In the next paragraph you can find the implementation details.
@@ -80,7 +81,9 @@ For now we will assume we got 2 public keys:
 * Our backup production certificate: `E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=`
 
 ### Configuring Spring Security
-As of version **4.1.0.RC1**, which will be released March 24th 2016, the `HpkpHeaderWriter` has been added to the security module. The 2 easiest ways to implement this feature is either by **Java configuration** or by using the older, but still supported, **XML configuration**. Below you can find both solutions:
+As of version **4.1.0.RC1**, which will be released March 24th 2016, the `HpkpHeaderWriter` has been added to the security module.
+The 2 easiest ways to implement this feature is either by **Java configuration** or by using the older, but still supported, **XML configuration**.
+Below you can find both solutions:
 
 ```java
 @EnableWebSecurity

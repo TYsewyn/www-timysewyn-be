@@ -35,6 +35,8 @@
         "@mdx-js/mdx": "^1.5.5",
         "@mdx-js/react": "^1.5.5",
         "@types/react": "^16.9.17",
+        "babel-plugin-prismjs": "^2.0.1",
+        "babel-preset-gatsby": "^0.2.27",
         "eslint": "^6.8.0",
         "eslint-plugin-mdx": "^1.6.5",
         "gatsby": "^2.18.25",

@@ -129,7 +129,7 @@ To see what else has changed, check out <OutboundLink href="https://spring.io/bl
 
 ### Spring Security 5.1
 
-In this new release a lot has been added regarding WebFlux support: OAuth 2, CORS and HTTPS redirection  are just a few to sum up.
+In this new release a lot has been added regarding WebFlux support: OAuth 2, CORS and HTTPS redirection are just a few to sum up.
 More than <OutboundLink href="https://github.com/spring-projects/spring-security/milestone/107?closed=1" rel="noreferrer" target="_blank">50 issues</OutboundLink> have been resolved too!
 
 To see what else has been added, check out <OutboundLink href="https://docs.spring.io/spring-security/site/docs/5.1.0.RELEASE/reference/htmlsingle/#new" rel="noreferrer" target="_blank">what's new</OutboundLink> in the reference documentation.

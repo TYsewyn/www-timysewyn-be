@@ -211,12 +211,24 @@ pre[class*="language-"]::before {
   background: rgb(247, 223, 30);
 }
 
+pre[class="language-bash"]::before {
+  content: "sh";
+}
+
+pre[class="language-dockerfile"]::before {
+  content: "dockerfile";
+}
+
 pre[class="language-gradle"]::before {
   content: "gradle";
 }
 
 pre[class="language-java"]::before {
   content: "java";
+}
+
+pre[class="language-javascript"]::before {
+  content: "js";
 }
 
 pre[class="language-json"]::before {
@@ -229,6 +241,10 @@ pre[class="language-maven"]::before {
 
 pre[class="language-text"]::before {
   content: "text";
+}
+
+pre[class="language-typescript"]::before {
+  content: "ts";
 }
 
 pre[class="language-xml"]::before {

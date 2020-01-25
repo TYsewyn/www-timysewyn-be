@@ -18,10 +18,10 @@ So what is Micrometer you ask?
 Basically, it comes down to this:
 > Think SLF4J, but for metrics.
 
-<OutboundLink href="https://micrometer.io" rel="noreferrer" target="_blank">Micrometer</OutboundLink> provides a simple facade over the instrumentation clients for the most popular monitoring systems.
+A simple facade over the instrumentation clients for the most popular monitoring systems is being provided by <OutboundLink href="https://micrometer.io" rel="noreferrer" target="_blank">Micrometer</OutboundLink>.
 It allows you to instrument your code with **dimensional metrics with a vendor-neutral interface** and decide on the monitoring system as a last step.
 Using this interface, we can support multiple monitoring systems and switch easily to an other system with little to no hassle.
-It already contains built-in support for <OutboundLink href="https://prometheus.io" rel="noreferrer" target="_blank">**Prometheus**</OutboundLink>, Netflix <OutboundLink href="https://github.com/Netflix/atlas" rel="noreferrer" target="_blank">**Atlas**</OutboundLink>, and <OutboundLink href="https://www.datadoghq.com" rel="noreferrer" target="_blank">**Datadog**</OutboundLink>, while <OutboundLink href="https://www.influxdata.com" rel="noreferrer" target="_blank">InfluxDB</OutboundLink>, <OutboundLink href="https://github.com/etsy/statsd" rel="noreferrer" target="_blank">statsd</OutboundLink>, and <OutboundLink href="https://graphiteapp.org" rel="noreferrer" target="_blank">Graphite</OutboundLink> are on their way!
+It already contains built-in support for <OutboundLink href="https://prometheus.io" rel="noreferrer" target="_blank">**Prometheus**</OutboundLink>, Netflix <OutboundLink href="https://github.com/Netflix/atlas" rel="noreferrer" target="_blank">**Atlas**</OutboundLink>, and <OutboundLink href="https://www.datadoghq.com" rel="noreferrer" target="_blank">**Datadog**</OutboundLink>, while <OutboundLink href="https://www.influxdata.com" rel="noreferrer" target="_blank">**InfluxDB**</OutboundLink>, <OutboundLink href="https://github.com/etsy/statsd" rel="noreferrer" target="_blank">**statsd**</OutboundLink>, and <OutboundLink href="https://graphiteapp.org" rel="noreferrer" target="_blank">**Graphite**</OutboundLink> are on their way!
 
 
 ## Using Micrometer in your application
@@ -30,13 +30,9 @@ Starting with Spring Boot 2, more specifically since milestone <OutboundLink hre
 Luckily for us, they also backported this functionality to Spring Boot 1.x through an additional library dependency!
 Just add the `micrometer-spring-legacy` module together with the additional monitoring system module, and you're good to go!
 
-In Gradle:
-
 ```gradle
 compile 'io.micrometer:micrometer-spring-legacy:latest.release'
 ```
-
-Or in Maven:
 
 ```maven
 <dependency>

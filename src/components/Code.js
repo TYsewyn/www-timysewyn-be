@@ -1,6 +1,7 @@
 import React from 'react'
 import {useSelector} from "react-redux";
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import Prism from "prismjs"
 import "./Code.scss"
 
 export default ({children}) => {
@@ -12,7 +13,8 @@ export default ({children}) => {
     <Highlight
       {...defaultProps}
       code={children.props.children.trim()}
-      language={language.toLowerCase()}>
+      language={language.toLowerCase()}
+      Prism={Prism}>
       {({
           tokens,
           getLineProps,

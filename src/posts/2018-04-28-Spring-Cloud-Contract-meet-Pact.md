@@ -36,7 +36,7 @@ The first release candidate of Spring Cloud Finchley, which was released on the 
 
 https://twitter.com/springcloud/status/989122422635925504
 
-Spring Cloud Contract has updated its support for <OutboundLink href="http://pact.io/" rel="noreferrer" target="_blank">Pact</OutboundLink> and added the support to connect to a <a href="https://github.com/pact-foundation/pact_broker" rel="noreferrer" target="_blank">Pact broker</a>.
+Spring Cloud Contract has updated its support for <OutboundLink href="http://pact.io/" rel="noreferrer" target="_blank">Pact</OutboundLink> and added the support to connect to a <OutboundLink href="https://github.com/pact-foundation/pact_broker" rel="noreferrer" target="_blank">Pact broker</OutboundLink>.
 The Pact broker acts as a repository for sharing the Pact contracts and verification results.
 The most awesome feature in my opinion is the visualisation of the contracts between all known parties.
 In the UI you can see the last time there was a new version of a contract published, when it was verified and what status it had, and last but not least the details of the contract.
@@ -58,7 +58,6 @@ Currently Pact contracts up until v4 are supported, which means that both reques
 Note that not all functionality is supported though, as is described in <OutboundLink href="https://cloud.spring.io/spring-cloud-contract/single/spring-cloud-contract.html#pact-converter" rel="noreferrer" target="_blank">this section</OutboundLink> of the reference documentation.
 
 A typical workflow to define such contracts could look like this:
-
 - The consumer of the data writes a test for the feature by doing TDD. In this test the contract is defined which will be used as a stub.
 - Next up the missing implementation is written.
 - When we push our changes to Git our CI pipeline is triggered, in which we'll upload all defined contracts to a central artifact repository, eg. a Pact broker, after all our tests have been run.
