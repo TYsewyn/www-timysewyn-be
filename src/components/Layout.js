@@ -56,7 +56,7 @@ const TemplateWrapper = ({children}) => {
           <html lang="en" />
           <title>{site_name}</title>
           <meta name="description" content={description} />
-          <meta name="robots" content="notranslate">
+          <meta name="robots" content="notranslate" />
 
           <meta name="msapplication-TileColor" content={theme.palette.primary.main} />
           <meta name="msapplication-TileImage" content={`${withPrefix('/')}mstile-144x144.png`} />

@@ -62,7 +62,7 @@ export default ({ children, location : { pathname }, pageContext: { frontmatter 
       <Helmet defer={false}>
         <title>{title + ` | ` + site_name}</title>
         <meta name="description" content={description} />
-        <meta name="robots" content="nofollow, notranslate">
+        <meta name="robots" content="nofollow, notranslate" />
         <meta property="og:title" content={title + ` | ` + site_name} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
