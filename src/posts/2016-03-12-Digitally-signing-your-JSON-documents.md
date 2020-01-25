@@ -23,7 +23,7 @@ In such an instance, the authenticity is being "repudiated".
 
 ## Meet JOSE
 
-<OutboundLink href="https://www.iana.org/assignments/jose/jose.xhtml" rel="noreferrer" target="_blank">JOSE</OutboundLink> is a framework intended to provide a method to securely transfer claims (such as authorisation information) between parties.
+<a href="https://www.iana.org/assignments/jose/jose.xhtml" target="_blank">JOSE</a> is a framework intended to provide a method to securely transfer claims (such as authorisation information) between parties.
 The JOSE framework consists of several specifications to serve this purpose:
 
 - [JWK](#jwk) – JSON Web Key, describes format and handling of cryptographic keys in JOSE
@@ -34,7 +34,7 @@ The JOSE framework consists of several specifications to serve this purpose:
 
 ## JWK
 
-A JSON Web Key (<OutboundLink href="https://tools.ietf.org/html/rfc7517" rel="noreferrer" target="_blank">RFC7517</OutboundLink>) is a JavaScript Object Notation (JSON) data structure that represents a cryptographic key.
+A JSON Web Key (<a href="https://tools.ietf.org/html/rfc7517" target="_blank">RFC7517</a>) is a JavaScript Object Notation (JSON) data structure that represents a cryptographic key.
 
 ```json
 { 
@@ -57,7 +57,7 @@ While "EC" and "RSA" are used for asymmetric encryption, "oct" is used for symme
 
 ## JWS
 
-The JSON Web Signature (<OutboundLink href="https://tools.ietf.org/html/rfc7515" rel="noreferrer" target="_blank">RFC7515</OutboundLink>) standard describes the process of creation and validation of a data structure representing a signed payload.
+The JSON Web Signature (<a href="https://tools.ietf.org/html/rfc7515" target="_blank">RFC7515</a>) standard describes the process of creation and validation of a data structure representing a signed payload.
 Assume someone wants to transfer an amount of money to his savings account.
 This action could be represented like the following JSON:
 
@@ -129,7 +129,7 @@ Including the public key in the **protected** header would not only give the ser
 
 ## JWE
 
-JSON Web Encryption (<OutboundLink href="https://tools.ietf.org/html/rfc7516" rel="noreferrer" target="_blank">RFC7516</OutboundLink>) follows the same logic as JWS with a few differences:
+JSON Web Encryption (<a href="https://tools.ietf.org/html/rfc7516" target="_blank">RFC7516</a>) follows the same logic as JWS with a few differences:
 
 - by default, for each message a new content encryption key (CEK) should be generated.
 This key is used to encrypt the plaintext and is attached to the final message.
@@ -140,15 +140,15 @@ To keep it short: While JWS can be read by everyone because of the simple base64
 
 ## JWA
 
-JSON Web Algorithms (<OutboundLink href="https://tools.ietf.org/html/rfc7518" rel="noreferrer" target="_blank">RFC7518</OutboundLink>) defines algorithms and their identifiers to be used in JWS and JWE.
+JSON Web Algorithms (<a href="https://tools.ietf.org/html/rfc7518" target="_blank">RFC7518</a>) defines algorithms and their identifiers to be used in JWS and JWE.
 The three parameters that specify algorithms are “alg” for JWS, “alg” and “enc” for JWE.
-Visit following links to view the list of supported algorithms for <OutboundLink href="https://tools.ietf.org/html/rfc7518#section-3" rel="noreferrer" target="_blank">JWS</OutboundLink> and <OutboundLink href="https://tools.ietf.org/html/rfc7518#section-5" rel="noreferrer" target="_blank">JWE</OutboundLink>
+Visit following links to view the list of supported algorithms for <a href="https://tools.ietf.org/html/rfc7518#section-3" target="_blank">JWS</a> and <a href="https://tools.ietf.org/html/rfc7518#section-5" target="_blank">JWE</a>
 
 ## JWT
 
-JSON Web Token (<OutboundLink href="https://tools.ietf.org/html/rfc7519" rel="noreferrer" target="_blank">RFC7519</OutboundLink>) is used for passing claims between parties in a web application environment.
-Because the tokens are designed to be compact and URL-safe they are especially usable in a web browser <OutboundLink href="https://en.wikipedia.org/wiki/Single_sign-on" rel="noreferrer" target="_blank">single sign-on</OutboundLink> (SSO) context.
-JWT claims can be typically used to pass the identity of authenticated users between an <OutboundLink href="https://en.wikipedia.org/wiki/Identity_provider" rel="noreferrer" target="_blank">identity provider</OutboundLink> and a <OutboundLink href="https://en.wikipedia.org/wiki/Service_provider" rel="noreferrer" target="_blank">service provider</OutboundLink>.
+JSON Web Token (<a href="https://tools.ietf.org/html/rfc7519" target="_blank">RFC7519</a>) is used for passing claims between parties in a web application environment.
+Because the tokens are designed to be compact and URL-safe they are especially usable in a web browser <a href="https://en.wikipedia.org/wiki/Single_sign-on" target="_blank">single sign-on</a> (SSO) context.
+JWT claims can be typically used to pass the identity of authenticated users between an <a href="https://en.wikipedia.org/wiki/Identity_provider" target="_blank">identity provider</a> and a <a href="https://en.wikipedia.org/wiki/Service_provider" target="_blank">service provider</a>.
 JWT relies on all previously mentioned JSON standards.
 
 The JWT standard defines claims - key/value pairs asserting information about a subject.
@@ -166,11 +166,11 @@ These claims are not mandatory to be used or implement in all cases, but they ra
 
 ## So, how do we sign this JSON document in code?
 
-Ranging from Java and .NET to Node.js, there are already a lot of libraries available on the <OutboundLink href="https://jwt.io/#libraries-io" rel="noreferrer" target="_blank">internet</OutboundLink>.
+Ranging from Java and .NET to Node.js, there are already a lot of libraries available on the <a href="https://jwt.io/#libraries-io" target="_blank">internet</a>.
 And even JavaScript has its own implementation of the standard!
 
 Because of its fluent API, we are using the Java JWT implementation in this post.
-Since not all algorithms are implemented in Java, we are also going to use Bouncy Castle as our <OutboundLink href="https://en.wikipedia.org/wiki/Java_Cryptography_Architecture" rel="noreferrer" target="_blank">JCA</OutboundLink> provider.
+Since not all algorithms are implemented in Java, we are also going to use Bouncy Castle as our <a href="https://en.wikipedia.org/wiki/Java_Cryptography_Architecture" target="_blank">JCA</a> provider.
 
 In our maven configuration we just add following two dependencies:
 

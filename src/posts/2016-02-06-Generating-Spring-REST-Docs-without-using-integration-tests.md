@@ -128,4 +128,4 @@ public class DeviceControllerTests {
     
 So this is how I managed to get rid of the manual, tedious work and keep my unit tests - and got back to the more serious part of my life: coding like a monkey. =)
 
-> PS: All of the code above is checked in at our public github repo, so you are free to clone the working application! You can find it <OutboundLink href="https://github.com/TYsewyn/spring-rest-docs-without-integration-tests" rel="noreferrer" target="_blank">here</OutboundLink>!
+> PS: All of the code above is checked in at our public github repo, so you are free to clone the working application! You can find it <a href="https://github.com/TYsewyn/spring-rest-docs-without-integration-tests" target="_blank">here</a>!

@@ -34,9 +34,9 @@ With the latest Spring Cloud release, that's a thing of the past!
 
 The first release candidate of Spring Cloud Finchley, which was released on the 25th of April, also ships the first release candidate of Spring Cloud Contract.
 
-https://twitter.com/springcloud/status/989122422635925504
+<blockquote class="twitter-tweet tw-align-center" data-dnt="true"><p lang="en" dir="ltr">Our first release candidate of the Spring Cloud Finchley release train has been released.  Checkout the blog post for more information and as always feedback is welcome! <a href="https://t.co/8TK0tudkzr">https://t.co/8TK0tudkzr</a></p>— Spring Cloud (@springcloud) <a href="https://twitter.com/springcloud/status/989122422635925504">April 25, 2018</a></blockquote>
 
-Spring Cloud Contract has updated its support for <OutboundLink href="http://pact.io/" rel="noreferrer" target="_blank">Pact</OutboundLink> and added the support to connect to a <OutboundLink href="https://github.com/pact-foundation/pact_broker" rel="noreferrer" target="_blank">Pact broker</OutboundLink>.
+Spring Cloud Contract has updated its support for <a href="http://pact.io/" target="_blank">Pact</a> and added the support to connect to a <a href="https://github.com/pact-foundation/pact_broker" target="_blank">Pact broker</a>.
 The Pact broker acts as a repository for sharing the Pact contracts and verification results.
 The most awesome feature in my opinion is the visualisation of the contracts between all known parties.
 In the UI you can see the last time there was a new version of a contract published, when it was verified and what status it had, and last but not least the details of the contract.
@@ -55,7 +55,7 @@ It's also possible to write Spring Cloud Contract contracts, convert them to Pac
 
 The upside to it is that these contracts are in fact language agnostic as opposed to Spring Cloud Contract, the downside to it is that it lacks some functionality regarding messaging compared to Spring Cloud Contract.
 Currently Pact contracts up until v4 are supported, which means that both request-response and messaging contracts can be used.
-Note that not all functionality is supported though, as is described in <OutboundLink href="https://cloud.spring.io/spring-cloud-contract/single/spring-cloud-contract.html#pact-converter" rel="noreferrer" target="_blank">this section</OutboundLink> of the reference documentation.
+Note that not all functionality is supported though, as is described in <a href="https://cloud.spring.io/spring-cloud-contract/single/spring-cloud-contract.html#pact-converter" target="_blank">this section</a> of the reference documentation.
 
 A typical workflow to define such contracts could look like this:
 - The consumer of the data writes a test for the feature by doing TDD. In this test the contract is defined which will be used as a stub.
@@ -72,10 +72,10 @@ Both teams can really benefit from such workflow: the consumer's team doesn't ne
 
 ## Useful links
 
-The <OutboundLink href="https://cloud.spring.io/spring-cloud-contract/reference/html/getting-started.html#getting-started-three-second-tour" rel="noreferrer" target="_blank">three-second</OutboundLink> tour gives you a nice very brief walkthrough of Spring Cloud Contract.
+The <a href="https://cloud.spring.io/spring-cloud-contract/reference/html/getting-started.html#getting-started-three-second-tour" target="_blank">three-second</a> tour gives you a nice very brief walkthrough of Spring Cloud Contract.
 
-This session about <OutboundLink href="https://www.youtube.com/watch?v=JEmpIDiX7LU" rel="noreferrer" target="_blank">Consumer Driven Contracts and Your Microservice Architecture</OutboundLink> by Marcin Grzejszczak (<OutboundLink href="https://twitter.com/mgrzejszczak" rel="noreferrer" target="_blank">@mgrzejszczak</OutboundLink>) and Adib Saikali (<OutboundLink href="https://twitter.com/asaikali" rel="noreferrer" target="_blank">@asaikali</OutboundLink>).
+This session about <a href="https://www.youtube.com/watch?v=JEmpIDiX7LU" target="_blank">Consumer Driven Contracts and Your Microservice Architecture</a> by Marcin Grzejszczak (<a href="https://twitter.com/mgrzejszczak" target="_blank">@mgrzejszczak</a>) and Adib Saikali (<a href="https://twitter.com/asaikali" target="_blank">@asaikali</a>).
 
-A <OutboundLink href="https://cloud.spring.io/spring-cloud-contract/single/spring-cloud-contract.html#_step_by_step_guide_to_consumer_driven_contracts_cdc" rel="noreferrer" target="_blank">step-by-step guide</OutboundLink> to Consumer Driven Contracts with Spring Cloud Contract.
+A <a href="https://cloud.spring.io/spring-cloud-contract/single/spring-cloud-contract.html#_step_by_step_guide_to_consumer_driven_contracts_cdc" target="_blank">step-by-step guide</a> to Consumer Driven Contracts with Spring Cloud Contract.
 
-<OutboundLink href="https://github.com/pact-foundation/pact-js" rel="noreferrer" target="_blank">Implementation of the consumer driven contract library Pact for Javascript</OutboundLink>, from creating a test to generating the contract and uploading it to the Pact broker.
+<a href="https://github.com/pact-foundation/pact-js" target="_blank">Implementation of the consumer driven contract library Pact for Javascript</a>, from creating a test to generating the contract and uploading it to the Pact broker.

@@ -56,7 +56,7 @@ That's why Pivotal has built a tool to help teams articulate and align around bu
 Together with developers, designers, and engineers from Pivotal Labs, Pivotal is going to apply the same methodology they use in other engagements with clients but tailored to the needs of the humanitarian and social impact sectors instead of just donating technology or funds.
 This way charitable and nonprofit organisations can use the present-day technologies and put them directly to use through the partnership with Pivotal, while building up the organisation's technology capabilities so they can continue their work after the engagement ends.
 
-If you want to find out more, just visit <OutboundLink href="https://pivotal.io/act" rel="noreferrer" target="_blank">https://pivotal.io/act</OutboundLink>.
+If you want to find out more, just visit <a href="https://pivotal.io/act" target="_blank">https://pivotal.io/act</a>.
 
 `youtube: fTZR4k8VWQU`
 
@@ -74,12 +74,12 @@ RSocket, built by Facebook, Netifi and Pivotal, is a binary application protocol
 This protocol is payload, transport AND language agnostic making it easy to send eg. JSON or protobuf payloads over TCP, UDP, WebSockets or HTTP/2 using Java, Kotlin, C++, JavaScript,...
 Using this protocol we can eg. easily resume our stream of events where we left off in case the connection got interrupted.
 
-To get more in-depth knowledge of the reasoning behind the protocol visit <OutboundLink href="https://rsocket.io/" rel="noreferrer" target="_blank">https://rsocket.io/</OutboundLink> and look up the document that explains the motivation in detail.
+To get more in-depth knowledge of the reasoning behind the protocol visit <a href="https://rsocket.io/" target="_blank">https://rsocket.io/</a> and look up the document that explains the motivation in detail.
 
 ### Spring Cloud Azure
 
 To quickly integrate with Azure services, Microsoft has already created a couple of starters to easily connect to eg. Azure Active Directory or Azure Key Vault.
-Not all starters can be found on <OutboundLink href="https://start.spring.io/">start.spring.io</OutboundLink>, to get a complete overview of all their starters and modules visit their <OutboundLink href="https://github.com/Microsoft/spring-cloud-azure" rel="noreferrer" target="_blank" rel="noreferrer" target="_blank">GitHub repository</OutboundLink>.
+Not all starters can be found on <a href="https://start.spring.io/">start.spring.io</a>, to get a complete overview of all their starters and modules visit their <a href="https://github.com/Microsoft/spring-cloud-azure" target="_blank" target="_blank">GitHub repository</a>.
 
 `youtube: P9ahKTFPx-A?start=563`
 
@@ -98,18 +98,18 @@ This way buildpacks can be used cross-platform.
 The highlights of this release are the support for JDK 11, initial refinements for GraalVM compatibility and Reactor & Hibernate got an upgrade to respectively Californium and 5.3.
 Improved startup times and less heap memory consumption are also some benefits you get when upgrading to this release.
 
-Check out <OutboundLink href="https://spring.io/blog/2018/09/21/spring-framework-5-1-goes-ga" rel="noreferrer" target="_blank">this post</OutboundLink> by Juergen Hoeller to find out more!
+Check out <a href="https://spring.io/blog/2018/09/21/spring-framework-5-1-goes-ga" target="_blank">this post</a> by Juergen Hoeller to find out more!
 
 ### Spring Boot 2.1.0.M4
 
 The fourth milestone of Spring Boot 2.1 got released to incorporate the 5.1 release of the Spring framework and closes over 40 issues and pull requests.
 
-Madhura Bhave wrote <OutboundLink href="https://spring.io/blog/2018/09/25/spring-boot-2-1-m4-available-now" rel="noreferrer" target="_blank">this post</OutboundLink> announcing the milestone release and added some useful links to the release notes and updated reference documentation.
+Madhura Bhave wrote <a href="https://spring.io/blog/2018/09/25/spring-boot-2-1-m4-available-now" target="_blank">this post</a> announcing the milestone release and added some useful links to the release notes and updated reference documentation.
 Make sure to check them out!
 
 ### Spring Batch 4.1.0.RC1
 
-Mahmoud Ben Hassine <OutboundLink href="https://spring.io/blog/2018/09/26/spring-batch-4-1-0-rc1-is-now-available" rel="noreferrer" target="_blank">announced</OutboundLink> yesterday the first release candidate of 4.1.0.
+Mahmoud Ben Hassine <a href="https://spring.io/blog/2018/09/26/spring-batch-4-1-0-rc1-is-now-available" target="_blank">announced</a> yesterday the first release candidate of 4.1.0.
 This release was mainly focused on running Spring Batch correctly on Java 8, 9, 10 and 11.
 Their plan is to release this version by the end of October so it can be shipped with Spring Boot 2.1.
 
@@ -125,14 +125,14 @@ This release notable topics are:
 - Apache Cassandra mapping improvements for Map and tuple types, Lifecycle Callbacks, and Kotlin Extensions
 - Replica Reads with Spring Data Redis
 
-To see what else has changed, check out <OutboundLink href="https://spring.io/blog/2018/09/21/spring-data-lovelace-ga-released" rel="noreferrer" target="_blank">this post</OutboundLink> by Mark Paluch.
+To see what else has changed, check out <a href="https://spring.io/blog/2018/09/21/spring-data-lovelace-ga-released" target="_blank">this post</a> by Mark Paluch.
 
 ### Spring Security 5.1
 
 In this new release a lot has been added regarding WebFlux support: OAuth 2, CORS and HTTPS redirection are just a few to sum up.
-More than <OutboundLink href="https://github.com/spring-projects/spring-security/milestone/107?closed=1" rel="noreferrer" target="_blank">50 issues</OutboundLink> have been resolved too!
+More than <a href="https://github.com/spring-projects/spring-security/milestone/107?closed=1" target="_blank">50 issues</a> have been resolved too!
 
-To see what else has been added, check out <OutboundLink href="https://docs.spring.io/spring-security/site/docs/5.1.0.RELEASE/reference/htmlsingle/#new" rel="noreferrer" target="_blank">what's new</OutboundLink> in the reference documentation.
+To see what else has been added, check out <a href="https://docs.spring.io/spring-security/site/docs/5.1.0.RELEASE/reference/htmlsingle/#new" target="_blank">what's new</a> in the reference documentation.
 
 ### Spring Fu 0.0.1
 
@@ -140,7 +140,7 @@ Spring Fu is an experimental micro-framework that makes it easy to create lightw
 It introduces Kofu (*Ko*tlin and *fu*nctional) and Jafu (*Ja*va and *fu*nctional, still a proof of concept) configuration for configuring Spring Boot in a functional way and makes use of the functional bean registration.
 It also ships with coroutines support, GraalVM native images support and various other features.
 
-To learn more about this interesting project, visit this <OutboundLink href="https://github.com/spring-projects/spring-fu" rel="noreferrer" target="_blank">link</OutboundLink>!
+To learn more about this interesting project, visit this <a href="https://github.com/spring-projects/spring-fu" target="_blank">link</a>!
 
 ### Spring Tools 4
 

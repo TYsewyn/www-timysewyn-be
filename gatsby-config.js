@@ -91,6 +91,64 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-feed-mdx',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.html,
+                  categories: [edge.node.frontmatter.category],
+                  author: 'Tim Ysewyn',
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                });
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        category
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            generator: "",
+            output: "/rss.xml",
+            match: "^/blog/"
+          }
+        ]
+      }
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -154,12 +212,6 @@ module.exports = {
               destinationDir: 'static',
             },
           },
-          {
-            resolve: "gatsby-remark-embedder",
-            options: {
-              debug: true
-            }
-          },
           `${__dirname}/plugins/gatsby-remark-fix-descendants-of-p`,
         ],
       },
@@ -173,7 +225,6 @@ module.exports = {
         sv: 6
       },
     },
-    'gatsby-plugin-material-ui', // Needed here because last replaceHeadComponents in onPreRenderHTML wins
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {

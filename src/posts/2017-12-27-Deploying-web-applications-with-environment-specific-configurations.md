@@ -12,8 +12,8 @@ category: Architecture
 
 Recently one of my colleagues came across a problem when he wanted to create an Angular application which needed to have different configuration values between environments.
 
-In 2016, Jurgen Van de Moere wrote a <OutboundLink href="https://www.jvandemo.com/how-to-configure-your-angularjs-application-using-environment-variables/" rel="noreferrer" target="_blank">blogpost</OutboundLink> which explained how to create environment-agnostic applications with AngularJS.
-A year later, Rich Franzmeier explained in his <OutboundLink href="https://www.intertech.com/Blog/deploying-angular-4-apps-with-environment-specific-info/" rel="noreferrer" target="_blank">blogpost</OutboundLink> a solution for Angular applications which was based on Jurgen’s post.
+In 2016, Jurgen Van de Moere wrote a <a href="https://www.jvandemo.com/how-to-configure-your-angularjs-application-using-environment-variables/" target="_blank">blogpost</a> which explained how to create environment-agnostic applications with AngularJS.
+A year later, Rich Franzmeier explained in his <a href="https://www.intertech.com/Blog/deploying-angular-4-apps-with-environment-specific-info/" target="_blank">blogpost</a> a solution for Angular applications which was based on Jurgen’s post.
 Although both solutions work perfectly, they both have some downsides to it.
 
 Nowadays we want to push devops to all teams.

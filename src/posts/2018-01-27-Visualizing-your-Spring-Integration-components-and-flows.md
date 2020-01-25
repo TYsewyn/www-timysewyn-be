@@ -15,7 +15,7 @@ category: Architecture
 > From the developer that just started in your team and who wants to have an overview, to the seasoned team member that needs to troubleshoot a problem in production.
 
 Currently we are working on the phased roll out of a microservices architecture at one of our clients.
-To ensure that everything works as it's supposed to we are using a lot of <OutboundLink href="http://enterpriseintegrationpatterns.com/" rel="noreferrer" target="_blank">Enterprise Integration Patterns</OutboundLink> to stitch both the old and the new landscape together.
+To ensure that everything works as it's supposed to we are using a lot of <a href="http://enterpriseintegrationpatterns.com/" target="_blank">Enterprise Integration Patterns</a> to stitch both the old and the new landscape together.
 The best way to achieve a solution when using Java, is to use Spring Integration.
 A few days ago we wanted to have clear insights on how certain microservices are communicating with the existing systems.
 
@@ -34,14 +34,16 @@ Sidenote: your application needs to be deployed on a web container, or it needs 
 
 ## Visualizing the exposed graph of components and flows
 
-With <OutboundLink href="https://d3js.org/" rel="noreferrer" target="_blank">D3.js</OutboundLink> we are able to visualize everything within our graph.
-In <OutboundLink href="https://gist.github.com/TYsewyn/99f86b42ec4fbedf06db611a1a04bea4" rel="noreferrer" target="_blank">this quick & dirty gist</OutboundLink> I created, you can find a simple example of a possible visualisation.
+With <a href="https://d3js.org/" target="_blank">D3.js</a> we are able to visualize everything within our graph.
+In <a href="https://gist.github.com/TYsewyn/99f86b42ec4fbedf06db611a1a04bea4" target="_blank">this quick & dirty gist</a> I created, you can find a simple example of a possible visualisation.
 Download the `index.html` file, point the script to the correct endpoint by editing the `graphEndpoint` variable, open the file in your browser and you should see every component and flow!
 
-As Gary Russell pointed out in <OutboundLink href="https://twitter.com/gprussell/status/957370937741111296" rel="noreferrer" target="_blank">his reply</OutboundLink> to my tweet you can also use Spring Flo for the visualization.
+<blockquote class="twitter-tweet tw-align-center" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">Cool. Also see the spring-flo-si sample (part of the spring-flo project) - it&#39;s on the angular-1x branch <a href="https://t.co/7PJhXJC6wF">https://t.co/7PJhXJC6wF</a> - also a spring-integration &quot;file-split-ftp&quot; sample app here: <a href="https://t.co/CURcJGppqz">https://t.co/CURcJGppqz</a></p>&mdash; Gary Russell 🍃 🏌️‍ (@gprussell) <a href="https://twitter.com/gprussell/status/957370937741111296">January 27, 2018</a></blockquote>
+
+As Gary Russell pointed out in his reply to my tweet after I published this post, you can also use Spring Flo for the visualization.
 Spring Flo is an Angular based, embeddable graphical component for pipeline/graph building and editing.
 This is used as the basis of the stream builder in Spring Cloud Data Flow.
-You can find the sample application <OutboundLink href="https://github.com/spring-projects/spring-flo/tree/angular-1.x/samples/spring-flo-si" rel="noreferrer" target="_blank">here</OutboundLink>.
+You can find the sample application <a href="https://github.com/spring-projects/spring-flo/tree/angular-1.x/samples/spring-flo-si" target="_blank">here</a>.
 
 ## Taking it one step further
 

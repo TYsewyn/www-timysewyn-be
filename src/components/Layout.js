@@ -12,13 +12,13 @@ import {
   responsiveFontSizes,
   ThemeProvider
 } from '@material-ui/core';
-import {OutboundLink} from "gatsby-plugin-google-analytics";
 import {MDXProvider} from "@mdx-js/react";
 import {useSelector} from "react-redux";
 import themeOptions from "../styles/theme";
 import "./layout.css";
 import Blockquote from "./Blockquote"
-import Code from "./Code"
+import { Link } from "./Link"
+import { Code } from "./Code"
 
 import profile from '../img/profile.jpg'
 
@@ -32,15 +32,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Literal = (data) => data.children;
-
 const TemplateWrapper = ({children}) => {
   const {description, site_name, siteUrl} = useSiteMetadata();
 
   const components = {
-    a: Literal, // Fix for link within link
+    a: Link,
     blockquote: Blockquote, // Fix for paragraph within blockquote
-    OutboundLink: OutboundLink,
     pre: Code,
   };
 

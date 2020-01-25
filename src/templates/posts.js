@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import useSiteMetadata from "../components/SiteMetadata";
-import {makeStyles, Paper, useMediaQuery, useTheme} from "@material-ui/core";
+import {makeStyles, Paper} from "@material-ui/core";
 import PropTypes from "prop-types";
 
 let useStyles = makeStyles(theme => {
@@ -16,10 +16,6 @@ let useStyles = makeStyles(theme => {
       '& blockquote': {
         borderLeft: `0.2em solid ${theme.palette.secondary.main}`,
         paddingLeft: '1em',
-        '&.twitter-tweet:not(.twitter-tweet-error)': {
-          borderLeft: 'none',
-          paddingLeft: 'inherit',
-        }
       },
       '& p': {
         marginBottom: '28px',
@@ -37,12 +33,9 @@ let useStyles = makeStyles(theme => {
 
 let BlogPost = ({ children, category, date, title }) => {
   let classes = useStyles();
-  let theme = useTheme();
-  let onDesktop = useMediaQuery(theme.breakpoints.up('lg'));
-  let elevation = (onDesktop ? 1 : 0);
   let formattedDate = new Date(date);
   return (
-    <Paper className={classes.blogPost} component="article" elevation={elevation} role="main" square={!onDesktop}>
+    <Paper className={classes.blogPost} component="article" elevation="1" role="main" square>
       <h1>{title}</h1>
       <div className={classes.subheading}>{category}</div><br /><time className={classes.published} dateTime={date}>{formattedDate.toLocaleDateString()}</time>
       {children}

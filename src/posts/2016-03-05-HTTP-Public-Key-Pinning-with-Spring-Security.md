@@ -13,15 +13,15 @@ category: Security
 ## What kind of sorcery is this?
 
 HTTP Public Key Pinning, or short HPKP, is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates.
-This was standardized in <OutboundLink href="http://tools.ietf.org/html/rfc7469" rel="noreferrer" target="_blank">RFC 7469</OutboundLink> and creates a new opportunity for server validation.
+This was standardized in <a href="http://tools.ietf.org/html/rfc7469" target="_blank">RFC 7469</a> and creates a new opportunity for server validation.
 Instead of using static certificate pinning, where public key hashes are hardcoded within an application, we can now use a more dynamic way of providing this public key hashes.
-One caveat to remember is that HPKP uses a Trust On First Use (<OutboundLink href="https://en.wikipedia.org/wiki/Trust_on_first_use" rel="noreferrer" target="_blank">TOFU</OutboundLink>) technique.
+One caveat to remember is that HPKP uses a Trust On First Use (<a href="https://en.wikipedia.org/wiki/Trust_on_first_use" target="_blank">TOFU</a>) technique.
 
 ## How does this work?
 
 A list of public key hashes will be served to the client via a special HTTP header by the web server, so clients can store this information for a given period of time.
 On subsequent connections within previous given period of time, the client expects a certificate containing a public key whose fingerprint is already known via HPKP.
-I **strongly** encourage you to read <OutboundLink href="https://timtaubert.de/blog/2014/10/http-public-key-pinning-explained/" rel="noreferrer" target="_blank">this article</OutboundLink> by Tim Taubert, where he explains what keys you should pin and what the different tradeoffs are.
+I **strongly** encourage you to read <a href="https://timtaubert.de/blog/2014/10/http-public-key-pinning-explained/" target="_blank">this article</a> by Tim Taubert, where he explains what keys you should pin and what the different tradeoffs are.
 
 Imagine you want to terminate the connection between the client and a malicious server for your main domain and all of your subdomains, but also want to be notified when such events happen.
 In the next paragraph you can find the implementation details.
@@ -42,7 +42,7 @@ In this example, **pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="** p
 The second pin declaration **pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="** also pins the backup key.
 **max-age=5184000** tells the client to store this information for two month, which is a reasonable time limit according to the IETF RFC.
 This key pinning is also valid for all subdomains, which is told by the **includeSubdomains** declaration.
-Finally, **report-uri="https://www.example.net/hpkp-report"** explains where to report pin validation failures.
+Finally, **`report-uri="https://www.example.net/hpkp-report"`** explains where to report pin validation failures.
 
 ## So how can we implement this with Spring Security?
 

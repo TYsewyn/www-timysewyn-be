@@ -4,7 +4,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import Prism from "prismjs"
 import "./Code.scss"
 
-export default ({children}) => {
+export function Code({children}) {
   const className = children.props.className || '';
   const matches = className.match(/language-(?<lang>.*)/);
   const language = matches && matches.groups && matches.groups.lang ? matches.groups.lang.trim().toLowerCase() : '';

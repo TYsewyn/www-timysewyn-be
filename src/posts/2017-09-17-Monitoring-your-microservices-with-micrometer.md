@@ -18,15 +18,15 @@ So what is Micrometer you ask?
 Basically, it comes down to this:
 > Think SLF4J, but for metrics.
 
-A simple facade over the instrumentation clients for the most popular monitoring systems is being provided by <OutboundLink href="https://micrometer.io" rel="noreferrer" target="_blank">Micrometer</OutboundLink>.
+A simple facade over the instrumentation clients for the most popular monitoring systems is being provided by <a href="https://micrometer.io" target="_blank">Micrometer</a>.
 It allows you to instrument your code with **dimensional metrics with a vendor-neutral interface** and decide on the monitoring system as a last step.
 Using this interface, we can support multiple monitoring systems and switch easily to an other system with little to no hassle.
-It already contains built-in support for <OutboundLink href="https://prometheus.io" rel="noreferrer" target="_blank">**Prometheus**</OutboundLink>, Netflix <OutboundLink href="https://github.com/Netflix/atlas" rel="noreferrer" target="_blank">**Atlas**</OutboundLink>, and <OutboundLink href="https://www.datadoghq.com" rel="noreferrer" target="_blank">**Datadog**</OutboundLink>, while <OutboundLink href="https://www.influxdata.com" rel="noreferrer" target="_blank">**InfluxDB**</OutboundLink>, <OutboundLink href="https://github.com/etsy/statsd" rel="noreferrer" target="_blank">**statsd**</OutboundLink>, and <OutboundLink href="https://graphiteapp.org" rel="noreferrer" target="_blank">**Graphite**</OutboundLink> are on their way!
+It already contains built-in support for <a href="https://prometheus.io" target="_blank">**Prometheus**</a>, Netflix <a href="https://github.com/Netflix/atlas" target="_blank">**Atlas**</a>, and <a href="https://www.datadoghq.com" target="_blank">**Datadog**</a>, while <a href="https://www.influxdata.com" target="_blank">**InfluxDB**</a>, <a href="https://github.com/etsy/statsd" target="_blank">**statsd**</a>, and <a href="https://graphiteapp.org" target="_blank">**Graphite**</a> are on their way!
 
 
 ## Using Micrometer in your application
 
-Starting with Spring Boot 2, more specifically since milestone <OutboundLink href="https://spring.io/blog/2017/09/15/spring-boot-2-0-0-m4-available-now" rel="noreferrer" target="_blank">M4</OutboundLink>, Micrometer becomes the defacto instrumentation library that will be powering the delivery of application metrics from Spring.
+Starting with Spring Boot 2, more specifically since milestone <a href="https://spring.io/blog/2017/09/15/spring-boot-2-0-0-m4-available-now" target="_blank">M4</a>, Micrometer becomes the defacto instrumentation library that will be powering the delivery of application metrics from Spring.
 Luckily for us, they also backported this functionality to Spring Boot 1.x through an additional library dependency!
 Just add the `micrometer-spring-legacy` module together with the additional monitoring system module, and you're good to go!
 
