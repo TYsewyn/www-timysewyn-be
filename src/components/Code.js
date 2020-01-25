@@ -7,21 +7,21 @@ import "./Code.scss"
 export default ({children}) => {
   const className = children.props.className || '';
   const matches = className.match(/language-(?<lang>.*)/);
-  const language = matches && matches.groups && matches.groups.lang ? matches.groups.lang : '';
+  const language = matches && matches.groups && matches.groups.lang ? matches.groups.lang.trim().toLowerCase() : '';
   const appearance = useSelector(state => state.appearance);
   return (
     <Highlight
       {...defaultProps}
       code={children.props.children.trim()}
-      language={language.toLowerCase()}
+      language={language}
       Prism={Prism}>
       {({
           tokens,
           getLineProps,
           getTokenProps,
         }) => (
-        <div className={`prism-code appearance-${appearance}`} data-language={language.toLowerCase()}>
-            <pre className={`language-${language.toLowerCase()}`}>
+        <div className={`prism-code appearance-${appearance}`} data-language={language}>
+            <pre className={`language-${language}`}>
               <code>
               {tokens.map((line, k) => {
                 const lineProps = getLineProps({line, key: k});

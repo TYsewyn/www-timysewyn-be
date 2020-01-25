@@ -5,9 +5,7 @@ div.prism-code {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: black;
   background: none;
-  text-shadow: 0 1px white;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   text-align: left;
@@ -22,21 +20,12 @@ pre[class*="language-"] {
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
   background: #b3d4fc;
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  text-shadow: none;
   background: #b3d4fc;
-}
-
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
 }
 
 /* Code blocks */
@@ -130,6 +119,16 @@ pre[class*="language-"] {
 }
 
 div.appearance-dark {
+  pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    background: #006080;
+  }
+
+  pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    background: #006080;
+  }
+
   .token.comment,
   .token.prolog,
   .token.doctype,
@@ -192,7 +191,6 @@ pre[class*="language-"] {
   color: inherit;
   overflow: scroll;
   padding: 1.5rem 0.5rem 1rem 0.5rem;
-  text-shadow: none;
 }
 
 pre[class*="language-"]::before {
