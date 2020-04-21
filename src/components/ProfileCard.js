@@ -62,7 +62,7 @@ export default () => (
           <CardContent>
             <Img fixed={profilePic.childImageSharp.fixed} alt="Profile picture of Tim" title="Profile picture of Tim" className={classes.vcardProfilePic} loading="eager" Tag="span" />
             <h1>Hi, my name is<br /><strong>Tim Ysewyn</strong></h1>
-            <h2>Solutions Architect<br />Pivotal, now part of VMware</h2>
+            <h2>Solutions Architect<br />VMware Tanzu</h2>
             <hr />
             <div>
               <p>Avid open source enthusiast.< br/>Spring Framework & Spring Cloud contributor.< br/>Part of NG-BE.</p>
